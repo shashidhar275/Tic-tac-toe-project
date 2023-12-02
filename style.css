@@ -6,6 +6,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+main{
+    background-image: url("./backgrounds/background5.jpg");
+    height: 72.8vh;
+    padding-top: 150px;
+}
+
 nav{
     background-color: black;
     color: white;
@@ -22,13 +28,17 @@ nav ul{
 .game-container{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    /* background-image: none; */
+    /* background-color: white; */
+    /* z-index: 20; */
 }
 
 .container{
     display: grid;
     grid-template-columns: repeat(3,10vw);/*10vw 10vw 10vw;*/
     grid-template-rows: repeat(3,10vw);/*10vw 10vw 10vw;*/
+    position: relative;
 }
 
 .box{
@@ -46,11 +56,15 @@ nav ul{
 
 .gameInfo{
     padding: 0 30px;
+}
+
+h1{
     font-family: 'Montserrat', sans-serif;
 }
 
 .imgbox img{
-    display: none;
+    width: 0;
+    transition: width 1s ease-in-out;
 }
 
 .bt-0{
@@ -68,3 +82,52 @@ nav ul{
 .br-0{
     border-right: 0;
 }
+
+.info{
+    font-size: 25px;
+    margin: 5px;
+}
+
+#reset{
+    background-color: rgb(175, 187, 198);
+    border-width: 2px;
+    margin: 5px 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 800px)
+{
+    .game-container{
+        flex-wrap: wrap;
+    }
+
+    .gameInfo{
+        margin-top: 50px;
+    }
+
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+        
+    }
+
+    main{
+        height: 100vh;
+    }
+    
+}
+
+/* .line{
+    background-color: black;
+    width: 30vw;
+    height: 3px;
+    position: absolute;
+    transform: rotate(90deg);
+} */
